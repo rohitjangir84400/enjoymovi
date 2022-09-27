@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="md:flex hidden">
           <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/">Home</Link></div>
           <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/movies_page">Movies</Link></div>
-          <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/tv_page">tv shows</Link></div>
+          <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/tv_page">tvw</Link></div>
           <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/celebs_page">Celebrities</Link></div>
           <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg">latest news</div>
         </div>
