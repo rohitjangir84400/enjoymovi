@@ -1,27 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MovieList({movie}){
-    return(
-      <div>
-        <div>Popular movies</div>
-        {movie.map(movie=>{
-          return(
-            <div>
-              <Link href={`/movie/${movie.id}`}>
+export default function MovieList({ movie }) {
+  return (
+    <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-2 bg-black p-5">
+      {movie.map(movie => {
+        return (
+          <div className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
+            <Link href={`/movie/${movie.id}`}>
               <div>
-              <div>
-                <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} height={200} width={200}/>
+                <div className="bg-white rounded-lg">
+                  <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} height={305} width={240} className="rounded-t-lg" />
+                  <div className="px-2 bg-white text-black overflow-hidden h-[50px] rounded-b-lg">{movie.title}</div>
+                </div>
+
               </div>
-              <div>{movie.title}</div>
-              </div>
-              </Link>
-            </div>
-             
-          );
-        })}
-      </div>
-    );
+            </Link>
+          </div>
+
+        );
+      })}
+    </div>
+  );
 }
 
 
