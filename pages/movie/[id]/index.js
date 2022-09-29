@@ -5,31 +5,29 @@ export default function Movie({ movies, movievideo }) {
   console.log(movies);
   console.log(movievideo);
   return (
-    <>
       <div>
         <div>
-          <Image src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`} height={500} width={400} />
+          <Image src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`} alt='' height={500} width={400} />
         </div>
         <div>{movies.title}</div>
         <div>{movies.overview}</div>
         <div>
-          {movies.production_companies.map(id => {
+          {movies.production_companies.map(camp => {
             return (
-              <div>{id.name}</div>
+              <div key={camp.id} >{camp.name}</div>
             );
           })}
         </div>
-      </div>
-      <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3">
         {movievideo.map(videoid => {
           return (
-            <div className="">
+            <div key={videoid.id} className="">
               <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoid.key}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             </div>
           );
         })}
       </div>
-    </>
+      </div>
   );
 }
 

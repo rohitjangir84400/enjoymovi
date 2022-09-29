@@ -6,11 +6,11 @@ export default function MovieList({ movie }) {
     <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-2 bg-black p-5">
       {movie.map(movie => {
         return (
-          <div className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
+          <div key={movie.id} className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
             <Link href={`/movie/${movie.id}`}>
               <div>
                 <div className="bg-white rounded-lg">
-                  <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} height={305} width={240} className="rounded-t-lg" />
+                  <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} aly='' height={305} width={240} className="rounded-t-lg" />
                   <div className="px-2 bg-white text-black overflow-hidden h-[50px] rounded-b-lg">{movie.title}</div>
                 </div>
 

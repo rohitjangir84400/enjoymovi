@@ -14,16 +14,16 @@ export default function Videocontainer(){
                 {/* <div className="absolute z-10 top-0 left-0 bg-red-600 h-full w-full text-center text-white hover:invisible">
                     Kgf chapter-2
                 </div> */}
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JKa05nyUmuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true" className="rounded-xl overflow-hidden"></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JKa05nyUmuQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true} className="rounded-xl overflow-hidden"></iframe>
 
                 </div>
                 <div className="md:basis-1/3 basis-1 p-5 h-[200px] w-full">
                     <div className="pb-4 h-[50%]">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8Qn_spdM5Zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true" className="rounded-xl overflow-hidden"></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8Qn_spdM5Zg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true} className="rounded-xl overflow-hidden"></iframe>
 
                     </div>
                     <div className="h-[50%]">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lk2oDvoonUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true" className="rounded-xl overflow-hidden"></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lk2oDvoonUc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={true} className="rounded-xl overflow-hidden"></iframe>
                     </div>
                 </div>
             </div>
