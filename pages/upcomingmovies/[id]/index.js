@@ -51,7 +51,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const res = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`);
+  const res = await axios(`https://api.themoviedb.org/3/movie/upcoming?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`);
   const movie = res.data.results;
   const ids = movie.map(movi => movi.id);
   const paths = ids.map(id => ({ params: { id: id.toString() } }));

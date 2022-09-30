@@ -4,13 +4,15 @@ import Navbar from "./components/navbar";
 import axios from "axios";
 
 
-export default function Movies_page({ movie }) {
+export default function Movies_page({ movie , toprated , upcoming}) {
   console.log(movie);
+  console.log(toprated);
+  console.log(upcoming);
   return (
     <>
       <Navbar />
-      <div className="text-[50px] bg-black text-[#00ffff] py-5 pl-5">Popular Movies</div>
-      <MovieList movie={movie.results} />
+      
+      <MovieList movie={movie.results} toprated={toprated.results} upcoming={upcoming.results}/>
       <Footer />
     </>
   );
@@ -19,9 +21,15 @@ export default function Movies_page({ movie }) {
 export async function getStaticProps() {
   const res = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
   const movie = res.data
+  const resp=await axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
+  const toprated=resp.data
+  const respo=await axios(`https://api.themoviedb.org/3/movie/upcoming?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
+  const upcoming=respo.data
   return {
     props: {
-      movie
+      movie,
+      toprated,
+      upcoming,
     },
   }
 }
