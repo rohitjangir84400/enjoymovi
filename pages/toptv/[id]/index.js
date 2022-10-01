@@ -3,8 +3,8 @@ import Image from "next/image";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
-export default function Movie({ poptv, tvvideo }) {
-  console.log(poptv);
+export default function Movie({ toptv, tvvideo }) {
+  console.log(toptv);
   console.log(tvvideo);
   return (
     <>
@@ -18,25 +18,25 @@ export default function Movie({ poptv, tvvideo }) {
       <div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white lg:px-[100px] px-5 mb-[100px]">
         <div className="flex flex-wrap ">
           <div className="basis-12/12 lg:basis-1/3 lg:order-1 order-2 mb-[-70px] rounded-3xl shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]">
-            <Image src={`https://image.tmdb.org/t/p/w500${poptv.poster_path}`} alt='' height={480} width={355} className="rounded-3xl" />
+            <Image src={`https://image.tmdb.org/t/p/w500${toptv.poster_path}`} alt='' height={480} width={355} className="rounded-3xl" />
           </div>
           <div className="basis-12/12 lg:basis-2/3 lg:order-2 order-1 w-full py-10 lg:pl-[100px] pl-2 font-thin">
-            <div className="sm:text-[50px] text-[20px] ">{poptv.name}</div>
-            <div className="py-5">{poptv.tagline}</div>
-            <div className="py-2">{poptv.status} | {poptv.type}
-              {poptv.genres.map(gen => {
+            <div className="sm:text-[50px] text-[20px] ">{toptv.name}</div>
+            <div className="py-5">{toptv.tagline}</div>
+            <div className="py-2">{toptv.status} | {toptv.type}
+              {toptv.genres.map(gen => {
                 return (
                   <> | {gen.name} </>
                 );
               })}
-              {poptv.seasons.map(sea => {
+              {toptv.seasons.map(sea => {
                 return (
                   <> | {sea.name} | {sea.episode_count} Episodes</>
                 );
               })}
 
             </div>
-            <div>{poptv.popularity} Ratings | {poptv.vote_average} Average Votes</div>
+            <div>{toptv.popularity} Ratings | {toptv.vote_average} Average Votes</div>
           </div>
         </div>
       </div>
@@ -47,13 +47,13 @@ export default function Movie({ poptv, tvvideo }) {
         <div className="lg:basis-2/3 basis-12/12">
           <div className="text-[50px] font-thin ">Storyline</div>
           <div className="text-[#948a99] py-10 px-2">
-            {poptv.overview}
+            {toptv.overview}
           </div>
         </div>
         <div className="border lg:basis-1/3 basis-12/12 p-5">
           <div>
             <span className="text-[25px] font-thin">Production Companies</span>
-            {poptv.production_companies.map(camp => {
+            {toptv.production_companies.map(camp => {
               return (
                 <div className="text-[#948a99] font-thin py-2" key={camp.id} > - {camp.name} , {camp.origin_country}</div>
               );
@@ -62,7 +62,7 @@ export default function Movie({ poptv, tvvideo }) {
           <div>
             <span className="text-[25px] font-thin">Production Countries</span>
             {
-              poptv.production_countries.map(coun => {
+              toptv.production_countries.map(coun => {
                 return (
                   <div className="text-[#948a99] font-thin py-2" key={coun.id}> - {coun.name}</div>
                 );
@@ -79,7 +79,7 @@ export default function Movie({ poptv, tvvideo }) {
         </div>
         <div className="flex">
           {
-            poptv.created_by.map(dir => {
+            toptv.created_by.map(dir => {
               return (
                 <div className="mr-5">
                   <Image src={`https://image.tmdb.org/t/p/w500${dir.profile_path}`} alt='' height={200} width={140} className="rounded-3xl" />
@@ -114,12 +114,12 @@ export default function Movie({ poptv, tvvideo }) {
 export async function getStaticProps(context) {
   const { id } = context.params;
   const res = await axios(`https://api.themoviedb.org/3/tv/${id}?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
-  const poptv = res.data;
+  const toptv = res.data;
   const tvvideos = await axios(`https://api.themoviedb.org/3/tv/${id}/videos?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
   const tvvideo = tvvideos.data.results;
   return {
     props: {
-      poptv,
+      toptv,
       tvvideo,
     },
   }
@@ -127,7 +127,7 @@ export async function getStaticProps(context) {
 
 
 export async function getStaticPaths() {
-  const res = await axios(`https://api.themoviedb.org/3/tv/popular?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
+  const res = await axios(`https://api.themoviedb.org/3/tv/top_rated?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
   const tvdetails = res.data.results;
   const ids = tvdetails.map(details => details.id);
   const paths = ids.map(id => ({ params: { id: id.toString() } }));
