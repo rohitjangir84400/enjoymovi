@@ -11,16 +11,17 @@ import Newssection from './components/newssection'
 import Joinsection from './components/join'
 import Footer from './components/footer'
 import Movi from './components/enjoy_movi'
+import axios from 'axios'
 
 
-export default function Home() {
+export default function Home({upcoming , populartv}) {
   return (
      <>
       <Navbar/>
       <Enjoy/>
-      <Homeslider/>
+      <Homeslider upcoming={upcoming.results}/>
       <Videocontainer/>
-      <Homewebslider/>
+      <Homewebslider populartv={populartv.results}/>
       <Movi/>
       <Counteranimation/>
       <Newssection/>
@@ -29,4 +30,18 @@ export default function Home() {
 
      </>
   )
+}
+
+
+export async function getStaticProps() {
+  const respo=await axios(`https://api.themoviedb.org/3/movie/upcoming?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`);
+  const upcoming=respo.data;
+  const res = await axios(`https://api.themoviedb.org/3/tv/top_rated?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`);
+  const populartv = res.data;
+  return {
+    props: {
+      upcoming,
+      populartv,
+    },
+  }
 }

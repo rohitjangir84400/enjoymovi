@@ -3,79 +3,66 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
-import NextArrow from "./customnext";
-import PreviousArrow from "./customprevious";
-import { Data } from "./carouseldata";
+import Link from "next/link";
 
 
 
 
 
-export default function Homeslider() {
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 3,
-        speed: 500,
-        autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 3000,
-        nextArrow: false,
-        prevArrow: false,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 4,
-                slidesToScroll: 3,
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-          ],
-    };
-    return (
-       <div className="p-20 w-full">
-         <div className="py-4 text-[50px] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-            latest movies
-         </div>
-         <div>
-            <Slider {...settings}>
-                <div className="p-2">
-                    <Image src={"/images/poster-1.jpg"} alt="image one" width={'276px'} height={'336px'} />
+export default function Homeslider({ upcoming }) {
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    speed: 500,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    nextArrow: false,
+    prevArrow: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
+  };
+  return (
+    <div className="px-10 py-10 bg-black">
+      <div className="py-4 text-[50px] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+        Watch Movies
+      </div>
+      <div>
+        <Slider {...settings}>
+          {upcoming.map(movi => {
+            return (
+              <Link href="/movies_page" key={movi.id}>
+                <div className="p-3 hover:scale-[1.15] transition duration-700 ease-in-out hover:cursor-pointer">
+                  <Image src={`https://image.tmdb.org/t/p/w500${movi.poster_path}`} aly='' height={750} width={500} className="" />
                 </div>
-                <div className="p-2">
-                    <Image src={"/images/poster-2.jpg"} alt="image two" width={'276px'} height={'336px'}  />
-                </div>
-                <div className="p-2">
-                    <Image src={"/images/poster-3.jpg"} alt="image three" width={'276px'} height={'336px'} />
-                </div>
-                <div className="p-2">
-                    <Image src={"/images/poster-4.jpg"} alt="image four" width={'276px'} height={'336px'}  />
-                </div>
-                <div className="p-2">
-                    <Image src={"/images/poster-1.jpg"} alt="image five" width={'276px'} height={'336px'}  />
-                </div>
-                <div className="p-2">
-                    <Image src={"/images/poster-2.jpg"} alt="image one" width={'276px'} height={'336px'}  />
-                </div>
-
-
-            </Slider>
-        </div>
-       </div>
-    );
+              </Link>
+            );
+          })}
+        </Slider>
+      </div>
+    </div>
+  );
 }

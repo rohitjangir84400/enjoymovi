@@ -36,7 +36,7 @@ export default function MovieList({ movie, toprated, upcoming }) {
       
       <div>
         <TabPanel hidden={selectedTab !== "upcoming"}>
-          <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-2 bg-black p-5">
+          <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-2 bg-black px-5 py-10">
             {upcoming.map(movie => {
               return (
                 <div key={movie.id} className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
@@ -56,7 +56,7 @@ export default function MovieList({ movie, toprated, upcoming }) {
           </div>
         </TabPanel>
         <TabPanel hidden={selectedTab !== "popular"}>
-          <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-2 bg-black p-5">
+          <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-2 bg-black px-5 py-10">
             {movie.map(movie => {
               return (
                 <div key={movie.id} className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
@@ -76,7 +76,7 @@ export default function MovieList({ movie, toprated, upcoming }) {
           </div>
         </TabPanel>
         <TabPanel hidden={selectedTab !== "top_rated"}>
-          <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-2 bg-black p-5">
+          <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-2 bg-black px-5 py-10" >
             {toprated.map(movie => {
               return (
                 <div key={movie.id} className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
