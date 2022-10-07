@@ -11,7 +11,7 @@ export default function Movie({ movies, movievideo }) {
       <Navbar />
 
       <div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white sm:text-[50px] text-[20px] py-10 lg:px-[50px] px-2">
-        Movie Details
+        Tv Show Details
       </div>
 
 
