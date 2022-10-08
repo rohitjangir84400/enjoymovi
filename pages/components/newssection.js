@@ -12,7 +12,7 @@ export default function Newssection() {
             <div className="flex flex-wrap">
                 <div className="basis-12/12 md:basis-1/3 p-5">
                     <div className="h-[250px] relative">
-                        <Image src={'/images/img-1.jpg'} alt='' layout='fill' objectFit="contain" />
+                        <Image src={'/images/img-1.jpg'} alt="failed to load" layout='fill' objectFit="contain" />
                     </div>
                     <div className="bg-white border">
                         <div>
@@ -35,7 +35,7 @@ export default function Newssection() {
 
                 <div className="basis-12/12 md:basis-1/3 p-5">
                     <div className="h-[250px] relative">
-                        <Image src={'/images/img-2.jpg'} alt='' layout='fill' objectFit="contain" />
+                        <Image src={'/images/img-2.jpg'} alt="failed to load" layout='fill' objectFit="contain" />
                     </div>
                     <div className="bg-white border">
                         <div>
@@ -55,7 +55,7 @@ export default function Newssection() {
                 </div>
                 <div className="basis-12/12 md:basis-1/3 p-5">
                     <div className="h-[250px] relative">
-                        <Image src={'/images/img-1.jpg'} layout='fill' objectFit="contain" />
+                        <Image src={'/images/img-1.jpg'} alt="failed to load"layout='fill' objectFit="contain" />
                     </div>
                     <div className="bg-white border">
                         <div>

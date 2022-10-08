@@ -42,7 +42,7 @@ export default function TvList({ latesttvshow , topratedtv, populartv }) {
           <div key={newtv.id}className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
             <Link href={`/latesttv/${newtv.id}`}>
               <div className="bg-white rounded-3xl">
-                <Image src={`https://image.tmdb.org/t/p/w500${newtv.poster_path}`} alt='' height={750} width={500} className="rounded-t-3xl" />
+                <Image src={`https://image.tmdb.org/t/p/w500${newtv.poster_path}`} alt="failed to load" height={750} width={500} className="rounded-t-3xl" />
                 <div className="px-2 text-black text-centerx h-[50px] rounded-b-3xl">{newtv.name}</div>
               </div>
             </Link>
@@ -58,7 +58,7 @@ export default function TvList({ latesttvshow , topratedtv, populartv }) {
                 <div key={populartv.id} className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
                   <Link href={`/tv/${populartv.id}`}>
                     <div className="bg-white rounded-3xl">
-                      <Image src={`https://image.tmdb.org/t/p/w500${populartv.poster_path}`} alt='' height={750} width={500} className="rounded-t-3xl" />
+                      <Image src={`https://image.tmdb.org/t/p/w500${populartv.poster_path}`} alt="failed to load" height={750} width={500} className="rounded-t-3xl" />
                       <div className="px-2 text-black text-centerx h-[50px] rounded-b-3xl">{populartv.name}</div>
                     </div>
                   </Link>
@@ -74,7 +74,7 @@ export default function TvList({ latesttvshow , topratedtv, populartv }) {
                 <div key={toptv.id} className="hover:cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
                   <Link href={`/toptv/${toptv.id}`}>
                     <div className="bg-white rounded-3xl">
-                      <Image src={`https://image.tmdb.org/t/p/w500${toptv.poster_path}`} alt='' height={750} width={500} className="rounded-t-3xl" />
+                      <Image src={`https://image.tmdb.org/t/p/w500${toptv.poster_path}`} alt="failed to load" height={750} width={500} className="rounded-t-3xl" />
                       <div className="px-2 text-black text-centerx h-[50px] rounded-b-3xl">{toptv.name}</div>
                     </div>
                   </Link>

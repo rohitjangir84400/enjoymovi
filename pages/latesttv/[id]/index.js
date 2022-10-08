@@ -19,7 +19,7 @@ export default function Movie({ latesttv, tvvideo, tvreview }) {
             <div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white lg:px-[100px] px-5 mb-[100px]">
                 <div className="flex flex-wrap ">
                     <div className="basis-12/12 lg:basis-1/3 lg:order-1 order-2 mb-[-70px] rounded-3xl shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]">
-                        <Image src={`https://image.tmdb.org/t/p/w500${latesttv.poster_path}`} alt='' height={480} width={355} className="rounded-3xl" />
+                        <Image src={`https://image.tmdb.org/t/p/w500${latesttv.poster_path}`} alt="failed to load" height={480} width={355} className="rounded-3xl" />
                     </div>
                     <div className="basis-12/12 lg:basis-2/3 lg:order-2 order-1 w-full py-10 lg:pl-[100px] pl-2 font-thin">
                         <div className="sm:text-[50px] text-[20px] ">{latesttv.name}</div>
@@ -83,7 +83,7 @@ export default function Movie({ latesttv, tvvideo, tvreview }) {
                         latesttv.created_by.map(dir => {
                             return (
                                 <div className="mr-5">
-                                    <Image src={`https://image.tmdb.org/t/p/w500${dir.profile_path}`} alt='' height={200} width={140} className="rounded-3xl" />
+                                    <Image src={`https://image.tmdb.org/t/p/w500${dir.profile_path}`} alt="failed to load" height={200} width={140} className="rounded-3xl" />
                                     <div className="py-3 text-center">
                                         {dir.name}
                                     </div>

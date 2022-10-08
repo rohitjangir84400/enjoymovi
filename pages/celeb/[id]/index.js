@@ -11,7 +11,7 @@ export default function Movie({ latestcelebs, latestcelebsimg }) {
       <Navbar />
       <div className="flex flex-wrap items-center px-5 md:py-[70px] py-5">
         <div className="basis-12/12 lg:basis-1/4 md:order-1 order-2 rounded-b-3xl md:rounded-t-3xl shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]">
-          <Image src={`https://image.tmdb.org/t/p/w500${latestcelebs.profile_path}`} height={480} width={355} className="md:rounded-t-3xl rounded-b-3xl" />
+          <Image src={`https://image.tmdb.org/t/p/w500${latestcelebs.profile_path}`} alt="failed to load" height={480} width={355} className="md:rounded-t-3xl rounded-b-3xl" />
         </div>
         <div className="basis-12/12 lg:basis-3/4 md:order-2 order-1 w-full"><div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white md:text-[50px] text-[45px] py-10 px-5 w-full md:rounded-r-[50%]">{latestcelebs.name}</div></div>
       </div>
@@ -32,7 +32,7 @@ export default function Movie({ latestcelebs, latestcelebsimg }) {
         {latestcelebsimg.profiles.map(img => {
           return (
             <>
-              <Image src={`https://image.tmdb.org/t/p/w500${img.file_path}`} height={750} width={500} className="rounded-3xl hover:scale-90 transition duration-700 ease-in-out" />
+              <Image src={`https://image.tmdb.org/t/p/w500${img.file_path}`} alt="failed to load" height={750} width={500} className="rounded-3xl hover:scale-90 transition duration-700 ease-in-out" />
             </>
           );
         })}
