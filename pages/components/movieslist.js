@@ -14,19 +14,16 @@ export default function MovieList({ movie, toprated, upcoming }) {
     <div>
       <div className="flex text-center hover:cursor-pointer bg-black text-white border-b">
         <div className="grow py-5 hover:text-red-700 "
-          isActive={selectedTab === "upcoming"}
           onClick={() => setSelectedTab("upcoming")}
         >
           Upcoming
         </div>
         <div className="grow py-5 hover:text-red-700 "
-          isActive={selectedTab === "popular"}
           onClick={() => setSelectedTab("popular")}
         >
           Popular
         </div>
         <div className="grow py-5 hover:text-red-700 "
-          isActive={selectedTab === "top_rated"}
           onClick={() => setSelectedTab("top_rated")}
         >
           Toprated
