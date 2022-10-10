@@ -56,7 +56,7 @@ export default function Homeslider({ upcoming }) {
             return (
               <Link href="/movies_page" key={movi.id}>
                 <div className="p-3 hover:scale-[1.15] transition duration-700 ease-in-out hover:cursor-pointer">
-                  <Image src={`https://image.tmdb.org/t/p/w500${movi.poster_path}`} aly="failed to load" height={750} width={500} className="" />
+                  <Image src={`https://image.tmdb.org/t/p/w500${movi.poster_path}`} alt="failed to load" height={750} width={500} className="" />
                 </div>
               </Link>
             );

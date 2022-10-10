@@ -43,7 +43,7 @@ export default function MovieList({ movie, toprated, upcoming }) {
                   <Link href={`/upcomingmovies/${movie.id}`}>
                     <div>
                       <div className="bg-white rounded-3xl">
-                        <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} aly="failed to load" height={750} width={500} className="rounded-t-3xl" />
+                        <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="failed to load" height={750} width={500} className="rounded-t-3xl" />
                         <div className="px-2 text-black text-center h-[50px] rounded-b-3xl">{movie.title}</div>
                       </div>
 
@@ -63,7 +63,7 @@ export default function MovieList({ movie, toprated, upcoming }) {
                   <Link href={`/movie/${movie.id}`}>
                     <div>
                       <div className="bg-white rounded-3xl">
-                        <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} aly="failed to load" height={750} width={500} className="rounded-t-3xl" />
+                        <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="failed to load" height={750} width={500} className="rounded-t-3xl" />
                         <div className="px-2 text-black text-center h-[50px] rounded-b-3xl">{movie.title}</div>
                       </div>
 
@@ -83,7 +83,7 @@ export default function MovieList({ movie, toprated, upcoming }) {
                   <Link href={`/tmovie/${movie.id}`}>
                     <div>
                       <div className="bg-white rounded-3xl">
-                        <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} aly="failed to load" height={750} width={500} className="rounded-t-3xl" />
+                        <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt="failed to load" height={750} width={500} className="rounded-t-3xl" />
                         <div className="px-2 text-black text-center h-[50px] rounded-b-3xl">{movie.title}</div>
                       </div>
 
