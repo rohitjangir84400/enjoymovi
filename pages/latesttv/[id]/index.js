@@ -8,7 +8,7 @@ export default function Movie({ latesttv, tvvideo, tvreview }) {
     console.log(tvvideo);
     console.log(tvreview);
     return (
-        <>
+        <div>
             <Navbar />
 
             <div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white sm:text-[50px] text-[20px] py-10 lg:px-[50px] px-2">
@@ -108,7 +108,7 @@ export default function Movie({ latesttv, tvvideo, tvreview }) {
                 </div>
             </div>
             <Footer />
-        </>
+        </div>
     );
 }
 

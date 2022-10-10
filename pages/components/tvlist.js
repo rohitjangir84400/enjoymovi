@@ -12,7 +12,7 @@ export default function TvList({ latesttvshow , topratedtv, populartv }) {
   ]);
 
   return (
-    <>
+    <div>
       <div className="flex text-center hover:cursor-pointer bg-black text-white border-b">
       <div className="grow py-5 hover:text-red-700"
           isActive={selectedTab === "latest"}
@@ -84,7 +84,7 @@ export default function TvList({ latesttvshow , topratedtv, populartv }) {
           </div>
         </TabPanel>
       </div>
-    </>
+    </div>
   );
 }
       

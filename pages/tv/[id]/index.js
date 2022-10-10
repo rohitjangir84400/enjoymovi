@@ -7,7 +7,7 @@ export default function Movie({ poptv, tvvideo }) {
   console.log(poptv);
   console.log(tvvideo);
   return (
-    <>
+    <div>
       <Navbar />
 
       <div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white sm:text-[50px] text-[20px] py-10 lg:px-[50px] px-2">
@@ -107,7 +107,7 @@ export default function Movie({ poptv, tvvideo }) {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

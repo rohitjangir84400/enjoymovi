@@ -7,7 +7,7 @@ export default function Movie({ latestcelebs, latestcelebsimg }) {
   console.log(latestcelebs);
   console.log(latestcelebsimg);
   return (
-    <>
+    <div>
       <Navbar />
       <div className="flex flex-wrap items-center px-5 md:py-[70px] py-5">
         <div className="basis-12/12 lg:basis-1/4 md:order-1 order-2 rounded-b-3xl md:rounded-t-3xl shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]">
@@ -38,7 +38,7 @@ export default function Movie({ latestcelebs, latestcelebsimg }) {
         })}
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

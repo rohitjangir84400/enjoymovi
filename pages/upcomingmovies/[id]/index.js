@@ -7,7 +7,7 @@ export default function Movie({ movies, movievideo }) {
   console.log(movies);
   console.log(movievideo);
   return (
-    <>
+    <div>
       <Navbar />
 
       <div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white sm:text-[50px] text-[20px] py-10 lg:px-[50px] px-2">
@@ -80,7 +80,7 @@ export default function Movie({ movies, movievideo }) {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
