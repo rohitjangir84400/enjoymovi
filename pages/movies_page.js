@@ -1,6 +1,6 @@
-import Footer from "./components/footer";
+
 import MovieList from "./components/movieslist";
-import Navbar from "./components/navbar";
+
 import axios from "axios";
 
 
@@ -8,14 +8,7 @@ export default function Movies_page({ movie , toprated , upcoming}) {
   console.log(movie);
   console.log(toprated);
   console.log(upcoming);
-  return (
-    <>
-      <Navbar />
-      
-      <MovieList movie={movie.results} toprated={toprated.results} upcoming={upcoming.results}/>
-      <Footer />
-    </>
-  );
+  return<MovieList movie={movie.results} toprated={toprated.results} upcoming={upcoming.results}/>
 }
 
 export async function getStaticProps() {

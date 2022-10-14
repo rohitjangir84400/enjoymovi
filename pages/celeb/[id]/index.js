@@ -1,44 +1,42 @@
 import axios from "axios";
 import Image from "next/image";
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar";
 
-export default function Movie({ latestcelebs, latestcelebsimg }) {
+export default function Celebs({ latestcelebs, latestcelebsimg }) {
   console.log(latestcelebs);
   console.log(latestcelebsimg);
   return (
-    <div>
-      <Navbar />
-      <div className="flex flex-wrap items-center px-5 md:py-[70px] py-5">
-        <div className="basis-12/12 lg:basis-1/4 md:order-1 order-2 rounded-b-3xl md:rounded-t-3xl shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]">
-          <Image src={`https://image.tmdb.org/t/p/w500${latestcelebs.profile_path}`} alt="failed to load" height={480} width={355} className="md:rounded-t-3xl rounded-b-3xl" />
+    <>
+
+
+    <div className="container max-w-4xl mx-auto pt-6 text-white">
+        {/* <Meta title={movies.title} /> */}
+
+        <div className="px-3">
+          <Image src={`https://image.tmdb.org/t/p/original${latestcelebs.profile_path}`} width={1000} height={600} className="rounded-md" alt="failed to load" />
+          <h1 className="font-bold text-xl my-2">{latestcelebs.name}</h1>
+          <p className="text-gray-600 text-sm mt-4">{latestcelebs.biography}</p>
+          <p className="mt-5 text-gray-600 text-sm">Department : {latestcelebs.known_for_department}</p>
+          <p className="text-gray-600 text-sm">Date Of Birth : {latestcelebs.birthday}</p>
+          <p className="text-gray-600 text-sm">Place Of Birth : {latestcelebs.place_of_birth}</p>
+          <p className="text-gray-600 text-sm">Popularity : {latestcelebs.popularity}</p>
         </div>
-        <div className="basis-12/12 lg:basis-3/4 md:order-2 order-1 w-full"><div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white md:text-[50px] text-[45px] py-10 px-5 w-full md:rounded-r-[50%]">{latestcelebs.name}</div></div>
+
       </div>
 
-      <div className="text-[#948a99] py-10 px-5">
-        {latestcelebs.biography}
-        <div className="text-black font-thin pt-5 ">Department : {latestcelebs.known_for_department}</div>
-        <div className="text-black font-thin py-2">Date Of Birth : {latestcelebs.birthday}</div>
-        <div className="text-black font-thin py-2">Place Of Birth : {latestcelebs.place_of_birth}</div>
-        <div className="text-black font-thin py-2">Popularity : {latestcelebs.popularity}</div>
-      </div>
 
-      <div></div>
-
-
+      <div>
       <div className="sm:text-[50px] text-[20px] font-thin p-5">Gallery</div>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 p-5 ">
-        {latestcelebsimg.profiles.map(img => {
+        {latestcelebsimg.profiles.map((img , i) => {
           return (
-            <>
+            <div key={i}> 
               <Image src={`https://image.tmdb.org/t/p/w500${img.file_path}`} alt="failed to load" height={750} width={500} className="rounded-3xl hover:scale-90 transition duration-700 ease-in-out" />
-            </>
+            </div>
           );
         })}
       </div>
-      <Footer />
-    </div>
+      </div>
+    </>
   );
 }
 

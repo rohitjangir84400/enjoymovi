@@ -4,12 +4,10 @@ import styles from '../styles/Home.module.css'
 import Homeslider from './components/carousel'
 import Counteranimation from './components/counter_ani'
 import Enjoy from './components/enjoysection'
-import Navbar from './components/navbar'
 import Homewebslider from './components/webcarousel'
 import Videocontainer from './components/videocontainer'
 import Newssection from './components/newssection'
 import Joinsection from './components/join'
-import Footer from './components/footer'
 import Movi from './components/enjoy_movi'
 import axios from 'axios'
 
@@ -17,7 +15,7 @@ import axios from 'axios'
 export default function Home({upcoming , populartv}) {
   return (
      <>
-      <Navbar/>
+
       <Enjoy/>
       <Homeslider upcoming={upcoming.results}/>
       <Videocontainer/>
@@ -26,7 +24,6 @@ export default function Home({upcoming , populartv}) {
       <Counteranimation/>
       <Newssection/>
       <Joinsection />
-      <Footer/>
 
      </>
   )

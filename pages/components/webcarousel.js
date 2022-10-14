@@ -46,8 +46,8 @@ export default function Homewebslider({ populartv }) {
     ],
   };
   return (
-    <div className="px-10 py-10 bg-black">
-      <div className="py-4 text-[50px] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+    <div className="p-10">
+      <div className="py-4 text-[30px] sm:text-[50px] text-white">
         Watch Tv Shows
       </div>
       <div>

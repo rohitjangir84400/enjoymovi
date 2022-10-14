@@ -1,6 +1,5 @@
-import Footer from "./components/footer";
+
 import TvList from "./components/tvlist";
-import Navbar from "./components/navbar";
 import axios from "axios";
 
 
@@ -8,13 +7,7 @@ export default function Tv_page({ populartv , topratedtv , latesttvshow }) {
   console.log(populartv);
   console.log(topratedtv);
   console.log(latesttvshow);
-  return (
-    <>
-      <Navbar />
-      <TvList populartv={populartv.results} topratedtv={topratedtv.results} latesttvshow={latesttvshow.results} />
-      <Footer />
-    </>
-  );
+  return<TvList populartv={populartv.results} topratedtv={topratedtv.results} latesttvshow={latesttvshow.results} />
 }
 
 export async function getStaticProps() {

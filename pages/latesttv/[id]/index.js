@@ -1,80 +1,50 @@
 import axios from "axios";
 import Image from "next/image";
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
 
-export default function Movie({ latesttv, tvvideo, tvreview }) {
+
+export default function Latesttv({ latesttv, tvvideo, tvreview }) {
     console.log(latesttv);
     console.log(tvvideo);
     console.log(tvreview);
     return (
         <>
-            <Navbar />
+            
 
-            <div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white sm:text-[50px] text-[20px] py-10 lg:px-[50px] px-2">
+            <div className="sm:text-[50px] text-[20px] py-10 lg:px-[50px] px-2">
                 Tv Show Details
             </div>
 
+            
+            <div className="container max-w-4xl mx-auto pt-6 text-white ">
+        {/* <Meta title={movies.title} /> */}
 
-            <div className="bg-gradient-to-r from-pink-500 to-violet-500 text-white lg:px-[100px] px-5 mb-[100px]">
-                <div className="flex flex-wrap ">
-                    <div className="basis-12/12 lg:basis-1/3 lg:order-1 order-2 mb-[-70px] rounded-3xl shadow-[0_35px_60px_-15px_rgba(0,0,0,1)]">
-                        <Image src={`https://image.tmdb.org/t/p/w500${latesttv.poster_path}`} alt="failed to load" height={480} width={355} className="rounded-3xl" />
-                    </div>
-                    <div className="basis-12/12 lg:basis-2/3 lg:order-2 order-1 w-full py-10 lg:pl-[100px] pl-2 font-thin">
-                        <div className="sm:text-[50px] text-[20px] ">{latesttv.name}</div>
-                        <div className="py-5">{latesttv.tagline}</div>
-                        <div className="py-2">{latesttv.status} | {latesttv.type}
-                            {latesttv.genres.map(gen => {
-                                return (
-                                    <> | {gen.name} </>
-                                );
-                            })}
-                            {latesttv.seasons.map(sea => {
-                                return (
-                                    <> | {sea.name} | {sea.episode_count} Episodes</>
-                                );
-                            })}
+        <div className="px-3">
+          <Image src={`https://image.tmdb.org/t/p/original${latesttv.poster_path}`} width={1000} height={600} className="rounded-md" alt={latesttv.name} />
+          <h1 className="font-bold text-xl my-2">{latesttv.name}</h1>
+          <p className="text-gray-600 text-sm mt-4">{latesttv.tagline}</p>
+          <p className="text-gray-600 text-sm mt-4">{latesttv.overview}</p>
+          <p className="text-gray-600 text-sm mt-4">Type : {latesttv.type}</p>
+          <p className="text-gray-600 text-sm mt-4">Status : {latesttv.status}</p>
+          <p className="mt-5 text-gray-600 text-sm">Genres: <span className="font-bold">{latesttv.genres.map(genre => genre.name).join(', ')}</span></p>
+          <p className="text-gray-600 text-sm">Season : <span className="font-bold">{latesttv.seasons.map(season => season.name).join(', ')}</span></p>
+          <p className="text-gray-600 text-sm">Episodes : <span className="font-bold">{latesttv.seasons.map(season => season.episode_count).join(', ')}</span></p>
+        </div>
 
-                        </div>
-                        <div>{latesttv.popularity} Ratings | {latesttv.vote_average} Average Votes</div>
-                    </div>
-                </div>
-            </div>
+      </div>
 
 
 
-            <div className="px-[50px] flex flex-wrap mb-10">
-                <div className="lg:basis-2/3 basis-12/12">
-                    <div className="text-[50px] font-thin ">Storyline</div>
-                    <div className="text-[#948a99] py-10 px-2">
-                        {latesttv.overview}
-                    </div>
-                </div>
-                <div className="border lg:basis-1/3 basis-12/12 p-5">
-                    <div>
-                        <span className="text-[25px] font-thin">Production Companies</span>
-                        {latesttv.production_companies.map(camp => {
-                            return (
-                                <div className="text-[#948a99] font-thin py-2" key={camp.id} > - {camp.name} , {camp.origin_country}</div>
-                            );
-                        })}
-                    </div>
-                    <div>
-                        <span className="text-[25px] font-thin">Production Countries</span>
-                        {
-                            latesttv.production_countries.map(coun => {
-                                return (
-                                    <div className="text-[#948a99] font-thin py-2" key={coun.id}> - {coun.name}</div>
-                                );
-                            })
-                        }
-                    </div>
-                </div>
-            </div>
 
 
-            <div className="px-[50px]">
+
+
+
+        
+
+
+
+
+            {/* <div className="px-[50px]">
                 <div className="sm:text-[50px] text-[20px] font-thin pb-10">
                     Created By
                 </div>
@@ -92,10 +62,10 @@ export default function Movie({ latesttv, tvvideo, tvreview }) {
                         })
                     }
                 </div>
-            </div>
+            </div> */}
 
            
-            <div className="lg:px-[50px] px-5 py-10 bg-black text-white">
+            <div className="lg:px-[50px] px-5 py-10 text-white">
                 <div className="sm:text-[50px] text-[20px] font-thin pb-10">Related Videos</div>
                 <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2">
                     {tvvideo.map(videoid => {
@@ -107,7 +77,6 @@ export default function Movie({ latesttv, tvvideo, tvreview }) {
                     })}
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

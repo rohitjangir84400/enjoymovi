@@ -1,19 +1,12 @@
-import Footer from "./components/footer";
+
 import Tranding from "./components/trandinglist";
-import Navbar from "./components/navbar";
+
 import axios from "axios";
 
 
 export default function Tranding_page({trandingdata}) {
   console.log(trandingdata)
-  return (
-    <>
-      <Navbar />
-      
-      <Tranding trandingdata={trandingdata.results}/>
-      <Footer />
-    </>
-  );
+  return<Tranding trandingdata={trandingdata.results}/>
 }
 
 export async function getStaticProps() {

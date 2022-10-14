@@ -1,17 +1,9 @@
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
 import axios from "axios";
 import Celebs from "./components/celebslist";
 
 export default function celebs_page({latestcelebs}){
     console.log(latestcelebs);
-    return(
-        <>
-        <Navbar/>
-         <Celebs latestcelebs={latestcelebs.results}/>
-        <Footer/>
-        </>
-    );
+    return<Celebs latestcelebs={latestcelebs.results}/>
 }
 
 

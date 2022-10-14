@@ -3,12 +3,9 @@ import Image from "next/image";
 
 export default function Videocontainer() {
     return (
-        <>
-            <div style={{
-                backgroundImage: `url('/images/backimgtwo.jpg')`, backgroundPosition: "center", backgroundSize: "cover",
-            }}>
-                <div className="bg-[#5d5e5c]/[0.9]">
-                    <div className="text-white text-[50px] text-center py-5">movies tailer</div>
+            <div>
+                <div>
+                    <div className="text-white text-[30px] sm:text-[50px] px-10 py-4">Movies tailer</div>
 
                     <div className="grid md:grid-cols-2 p-10">
                         <div className="p-2">
@@ -26,7 +23,6 @@ export default function Videocontainer() {
                 </div>
 
             </div>
-        </>
     );
 }
 

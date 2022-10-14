@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function Newssection() {
     return (
-        <div className="text-center bg-[#edf5f7] px-10 py-20">
+        <div className="text-center text-white px-10 py-20">
             <div>
-                <div className="text-[50px] text-[#3e4555] pb-5">latest news</div>
+                <div className="text-[50px] pb-5">latest news</div>
                 <div className="text-[#948a99] pb-5">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <br/>nonummy consectetuer adipiscing.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <br />nonummy consectetuer adipiscing.
                 </div>
             </div>
             <div className="flex flex-wrap">
@@ -55,7 +55,7 @@ export default function Newssection() {
                 </div>
                 <div className="basis-12/12 md:basis-1/3 p-5">
                     <div className="h-[250px] relative">
-                        <Image src={'/images/img-1.jpg'} alt="failed to load"layout='fill' objectFit="contain" />
+                        <Image src={'/images/img-1.jpg'} alt="failed to load" layout='fill' objectFit="contain" />
                     </div>
                     <div className="bg-white border">
                         <div>

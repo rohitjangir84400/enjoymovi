@@ -3,93 +3,49 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import { useState } from "react";
+import { HomeIcon, FilmIcon, TvIcon, SparklesIcon, BarsArrowUpIcon } from '@heroicons/react/24/solid'
 
 export default function Navbar() {
-  const [open, setopen] = useState(false);
-  const [active, setactive] = useState(false);
-
   return (
-    <>
-      <div>
-        <div className="h-[4px] bg-gradient-to-r from-pink-500 to-violet-500"></div>
-        <div className="flex justify-between items-center py-2 px-2 ">
-          <div className="px-2 font-bold text-[30px] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-            <Link href="/">enjoymovi</Link>
-          </div>
-          <div className="md:flex hidden">
-            <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-              </svg>
-
-            </Link></div>
-            <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/movies_page">Movies</Link></div>
-            <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/tv_page">tv</Link></div>
-            <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/celebs_page">Celebrities</Link></div>
-            <div className="px-3 py-2 hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-white rounded-lg"><Link href="/tranding_page">Tranding</Link></div>
-          </div>
-          <div className="flex items-center">
-            <div className="px-4 hover:cursor-pointer" onClick={() => setactive(!active)}>
-              {active ?
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                :
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-              }
-
-            </div>
-            <div className="md:hidden" onClick={() => setopen(!open)}>
-              {open ?
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                : <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-              }
-            </div>
-          </div>
+    <div className="flex flex-wrap items-center justify-between text-[#dde5ed] sticky top-0 z-10 bg-[#010d1a]">
+      <div className="flex-grow px-5 text-center md:text-left ">
+        <div className="py-3 text-[40px] font-bold hover:text-white">
+          <Link className="cursor-pointer" href="/">enjoymovi</Link>
         </div>
-        <div className="h-[4px] bg-gradient-to-r from-pink-500 to-violet-500"></div>
       </div>
-      {open ?
-        <div className="absolute top-[68px] z-[100] md:hidden w-full bg-gradient-to-r from-pink-500 to-violet-500 text-white rounded-b-3xl">
-          <div className="px-6 py-3 "><Link href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-            </svg>
-
-          </Link></div>
-          <div className="px-6 py-3 "><Link href="/movies_page">Movies</Link></div>
-          <div className="px-6 py-3 "><Link href="/tv_page">tv</Link></div>
-          <div className="px-6 py-3 "><Link href="/celebs_page">Celebrities</Link></div>
-          <div className="px-6 py-3 ">latest news</div>
-        </div>
-        :
-        ''
-      }
-      {
-        active ?
-          <div>
-            <div className="flex p-2">
-              <form className="grow border">
-                <input type="text" id="last" name="query" placeholder="Enter movies & series title" className="px-2 py-3 w-full outline-0" />
-              </form>
-              <div className="bg-[#9352b3] px-2 py-3 hover:cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-              </div>
-            </div>
+      <div className="flex justify-evenly w-full px-10 py-3 md:max-w-xl text-center">
+        <Link href="/">
+          <div className="group w-12 sm:w-20 cursor-pointer hover:text-white">
+            <HomeIcon className="h-6 w-6 group-hover:animate-bounce mx-auto" />
+            <div className="group-hover:visible invisible ">Home</div>
           </div>
-          :
-          ''
-      }
-    </>
-
+        </Link>
+        <Link href="/movies_page">
+          <div className="group w-12 sm:w-20 cursor-pointer hover:text-white">
+            <FilmIcon className="h-6 w-6 group-hover:animate-bounce mx-auto" />
+            <div className="group-hover:visible invisible ">Movies</div>
+          </div>
+        </Link>
+        <Link href="/tv_page">
+          <div className="group w-12 sm:w-20 cursor-pointer hover:text-white ">
+            <TvIcon className="h-6 w-6 group-hover:animate-bounce mx-auto" />
+            <div className="group-hover:visible invisible ">Tv</div>
+          </div>
+        </Link>
+        <Link href="/celebs_page">
+          <div className="group w-12 sm:w-20 cursor-pointer hover:text-white">
+            <SparklesIcon className="h-6 w-6 group-hover:animate-bounce mx-auto" />
+            <div className="group-hover:visible invisible ">Stars</div>
+          </div>
+        </Link>
+        <Link href="/tranding_page">
+          <div className="group w-12 sm:w-20 cursor-pointer hover:text-white">
+            <BarsArrowUpIcon className="h-6 w-6 group-hover:animate-bounce mx-auto" />
+            <div className="group-hover:visible invisible ">Tranding</div>
+          </div>
+        </Link>
+      </div>
+    </div>
   );
 }
+
