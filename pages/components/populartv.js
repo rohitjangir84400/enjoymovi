@@ -7,7 +7,7 @@ export default function Popular_tv({ Populartv }) {
             {Populartv.map(newtv => {
                 return (
                     <div key={newtv.id} className="group cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
-                        <Link href={`/latesttv/${newtv.id}`}>
+                        <Link href={`/tv/${newtv.id}`}>
                             <div>
                                 <Image src={`https://image.tmdb.org/t/p/w500${newtv.poster_path}`} alt="failed to load" height={750} width={500} />
                                 <div className="invisible group-hover:visible px-2 h-[50px] transition duration-700 ease-in-out">{newtv.name}</div>

@@ -7,29 +7,36 @@ export default function Toptv({ toptv, tvvideo }) {
     console.log(tvvideo);
     return (
         <>
-            
-
-            <div className="sm:text-[50px] text-[20px] py-10 lg:px-[50px] px-2 text-white">
-                Tv Show Details
-            </div>
-
-            
             <div className="container max-w-4xl mx-auto pt-6 text-white ">
-        {/* <Meta title={movies.title} /> */}
+                {/* <Meta title={movies.title} /> */}
+                <div className="sm:text-[50px] text-[30px] py-10 px-3">
+                    Tv Show Details
+                </div>
+                <div className="px-3 text-gray-600">
+                    <Image src={`https://image.tmdb.org/t/p/original${toptv.poster_path}`} width={1000} height={1100} className="rounded-md" alt={toptv.name} />
+                    <h1 className="font-bold text-[30px] text-white my-2">{toptv.name}</h1>
+                    <p className=" text-sm mt-4">{toptv.tagline}</p>
+                    <p className="text-sm mt-4">{toptv.overview}</p>
+                    <p className="text-sm mt-4">Type : {toptv.type}</p>
+                    <p className="text-sm mt-4">Status : {toptv.status}</p>
+                    <p className="mt-5 text-sm">Genres: <span className="font-bold">{toptv.genres.map(genre => genre.name).join(', ')}</span></p>
+                    <p className="text-sm">Season : <span className="font-bold">{toptv.seasons.map(season => season.name).join(', ')}</span></p>
+                    <p className="text-sm">Episodes : <span className="font-bold">{toptv.seasons.map(season => season.episode_count).join(', ')}</span></p>
+                </div>
+                <div className="py-10 px-3">
+                    <div className="sm:text-[50px] text-[30px] font-thin pb-10">Related Videos</div>
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2">
+                        {tvvideo.map(videoid => {
+                            return (
+                                <div key={videoid.id} className="">
+                                    <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${videoid.key}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
 
-        <div className="px-3">
-          <Image src={`https://image.tmdb.org/t/p/original${toptv.poster_path}`} width={1000} height={600} className="rounded-md" alt={toptv.name} />
-          <h1 className="font-bold text-xl my-2">{toptv.name}</h1>
-          <p className="text-gray-600 text-sm mt-4">{toptv.tagline}</p>
-          <p className="text-gray-600 text-sm mt-4">{toptv.overview}</p>
-          <p className="text-gray-600 text-sm mt-4">Type : {toptv.type}</p>
-          <p className="text-gray-600 text-sm mt-4">Status : {toptv.status}</p>
-          <p className="mt-5 text-gray-600 text-sm">Genres: <span className="font-bold">{toptv.genres.map(genre => genre.name).join(', ')}</span></p>
-          <p className="text-gray-600 text-sm">Season : <span className="font-bold">{toptv.seasons.map(season => season.name).join(', ')}</span></p>
-          <p className="text-gray-600 text-sm">Episodes : <span className="font-bold">{toptv.seasons.map(season => season.episode_count).join(', ')}</span></p>
-        </div>
-
-      </div>
+            </div>
 
 
             {/* <div className="px-[50px]">
@@ -51,21 +58,6 @@ export default function Toptv({ toptv, tvvideo }) {
                     }
                 </div>
             </div> */}
-
-
-            <div className="lg:px-[50px] px-5 py-10 text-white">
-                <div className="sm:text-[50px] text-[20px] font-thin pb-10">Related Videos</div>
-                <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2">
-                    {tvvideo.map(videoid => {
-                        return (
-                            <div key={videoid.id} className="">
-                                <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${videoid.key}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-
         </>
     );
 }

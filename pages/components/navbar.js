@@ -7,7 +7,7 @@ import { HomeIcon, FilmIcon, TvIcon, SparklesIcon, BarsArrowUpIcon } from '@hero
 
 export default function Navbar() {
   return (
-    <div className="flex flex-wrap items-center justify-between text-[#dde5ed] sticky top-0 z-10 bg-[#010d1a]">
+    <div className="flex flex-wrap items-center justify-between text-[#dde5ed] sticky top-0 z-10 bg-[#010d1a] border-b">
       <div className="flex-grow px-5 text-center md:text-left ">
         <div className="py-3 text-[40px] font-bold hover:text-white">
           <Link className="cursor-pointer" href="/">enjoymovi</Link>
