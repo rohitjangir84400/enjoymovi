@@ -1,10 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TabPanel, useTabs } from "react-headless-tabs";
-import Latest_tv from "./latesttv";
 import Meta from "./meta";
-import Popular_tv from "./populartv";
-import Toprated_tv from "./topratedtv";
 
 
 export default function TvList({ latesttvshow, topratedtv, populartv }) {
@@ -38,13 +35,52 @@ export default function TvList({ latesttvshow, topratedtv, populartv }) {
 
       <div>
         <TabPanel hidden={selectedTab !== "latest"}>
-          <Latest_tv Latesttv={latesttvshow} />
+          <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-2 p-5">
+            {latesttvshow.map(newtv => {
+              return (
+                <div key={newtv.id} className="group cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
+                  <Link href={`/latesttv/${newtv.id}`}>
+                    <div>
+                      <Image src={`https://image.tmdb.org/t/p/w500${newtv.poster_path}`} alt="failed to load" height={750} width={500} />
+                      <div className="invisible group-hover:visible px-2 h-[50px] transition duration-700 ease-in-out">{newtv.name}</div>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </TabPanel>
         <TabPanel hidden={selectedTab !== "popular"}>
-          <Popular_tv Populartv={populartv} />
+          <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-2 p-5">
+            {populartv.map(newtv => {
+              return (
+                <div key={newtv.id} className="group cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
+                  <Link href={`/tv/${newtv.id}`}>
+                    <div>
+                      <Image src={`https://image.tmdb.org/t/p/w500${newtv.poster_path}`} alt="failed to load" height={750} width={500} />
+                      <div className="invisible group-hover:visible px-2 h-[50px] transition duration-700 ease-in-out">{newtv.name}</div>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </TabPanel>
         <TabPanel hidden={selectedTab !== "top_rated"}>
-          <Toprated_tv Topratedtv={topratedtv} />
+          <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-2 p-5">
+            {topratedtv.map(newtv => {
+              return (
+                <div key={newtv.id} className="group cursor-pointer hover:scale-90 transition duration-700 ease-in-out">
+                  <Link href={`/toptv/${newtv.id}`}>
+                    <div>
+                      <Image src={`https://image.tmdb.org/t/p/w500${newtv.poster_path}`} alt="failed to load" height={750} width={500} />
+                      <div className="invisible group-hover:visible px-2 h-[50px] transition duration-700 ease-in-out">{newtv.name}</div>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </TabPanel>
       </div>
     </div>
