@@ -21,21 +21,9 @@ export default function Populartv({ poptv, tvvideo }) {
           <p className="text-gray-600 text-sm mt-4">{poptv.overview}</p>
           <p className="text-gray-600 text-sm mt-4">Type : {poptv.type}</p>
           <p className="text-gray-600 text-sm mt-4">Status : {poptv.status}</p>
-          <p className="mt-5 text-gray-600 text-sm">Genres: <span className="font-bold">{poptv.genres.map(genre => {
-            return(
-              <span key={genre.id} >{genre.name}</span>
-            );
-          }).join(', ')}</span></p>
-          <p className="text-gray-600 text-sm">Season : <span className="font-bold">{poptv.seasons.map(season => {
-            return(
-              <span key={season.id} >{season.name}</span>
-            );
-          }).join(', ')}</span></p>
-          <p className="text-gray-600 text-sm">Season : <span className="font-bold">{poptv.seasons.map(season => {
-            return(
-              <span key={season.id} >{season.episode_count}</span>
-            );
-          }).join(', ')}</span></p>
+          <p className="mt-5 text-gray-600 text-sm">Genres: <span className="font-bold">{poptv.genres.map(genre => genre.name).join(', ')}</span></p>
+          <p className="text-gray-600 text-sm">Season : <span className="font-bold">{poptv.seasons.map(season => season.name).join(', ')}</span></p>
+          <p className="text-gray-600 text-sm">Episodes : <span className="font-bold">{poptv.seasons.map(season => season.episode_count).join(', ')}</span></p>
         </div>
         <div className="py-10 px-3">
           <div className="sm:text-[50px] text-[30px] font-thin pb-10">Related Videos</div>
