@@ -13,7 +13,7 @@ export default function Movi() {
                 </div>
                 <div className="md:basis-1/2 basis-12/12">
                     <div className="w-fit mx-auto">
-                        <Image src={'./public/images/logo.png'} alt="failed to load" height={400} width={400} />
+                        <Image src={'/images/Logo.png'} alt="failed to load" height={400} width={400} />
                     </div>
                 </div>
             </div>
