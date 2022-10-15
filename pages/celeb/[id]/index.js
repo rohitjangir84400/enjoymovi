@@ -1,5 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
+import next from "next";
 
 export default function Celebs({ latestcelebs, latestcelebsimg }) {
   console.log(latestcelebs);

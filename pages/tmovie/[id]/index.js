@@ -1,7 +1,7 @@
 import axios from "axios";
 import Image from "next/image";
 import Meta from "../../components/meta";
-
+import next from "next";
 export default function Movie({ movies, movievideo }) {
   console.log(movies);
   console.log(movievideo);

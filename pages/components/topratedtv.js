@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import next from "next";
 export default function Toprated_tv({ Topratedtv }) {
     return (
         <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-2 p-5">

@@ -1,6 +1,6 @@
 
 import MovieList from "./components/movieslist";
-
+import next from "next";
 import axios from "axios";
 
 

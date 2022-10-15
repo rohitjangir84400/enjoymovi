@@ -1,4 +1,4 @@
-
+import next from "next";
 import TvList from "./components/tvlist";
 import axios from "axios";
 

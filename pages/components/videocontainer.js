@@ -1,4 +1,4 @@
-import Image from "next/image";
+import next from "next";
 
 
 export default function Videocontainer() {

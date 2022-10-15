@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import next from "next";
 const Meta = ({ keywords, description, title }) => {
   return (
     <Head>

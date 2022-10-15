@@ -1,5 +1,6 @@
 import axios from "axios";
 import Celebs from "./components/celebslist";
+import next from "next";
 
 export default function celebs_page({latestcelebs}){
     console.log(latestcelebs);

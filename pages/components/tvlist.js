@@ -5,7 +5,7 @@ import Latest_tv from "./latesttv";
 import Meta from "./meta";
 import Popular_tv from "./populartv";
 import Toprated_tv from "./topratedtv";
-
+import next from "next";
 
 export default function TvList({ latesttvshow, topratedtv, populartv }) {
 

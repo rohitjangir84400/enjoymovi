@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Meta from "./meta";
+import next from "next";
 
 export default function Celebs({ latestcelebs }) {
     return (
