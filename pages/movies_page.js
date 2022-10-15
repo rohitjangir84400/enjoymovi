@@ -1,5 +1,5 @@
 
-import MovieList from "./components/movieslist";
+import MovieList from "../components/movieslist";
 import axios from "axios";
 
 
@@ -11,11 +11,11 @@ export default function Movies_page({ movie , toprated , upcoming}) {
 }
 
 export async function getStaticProps() {
-  const res = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
+  const res = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`)
   const movie = res.data
-  const resp=await axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
+  const resp=await axios(`https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.API_KEY}&language=en-US&page=1`)
   const toprated=resp.data
-  const respo=await axios(`https://api.themoviedb.org/3/movie/upcoming?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`)
+  const respo=await axios(`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.API_KEY}&language=en-US&page=1`)
   const upcoming=respo.data
   return {
     props: {

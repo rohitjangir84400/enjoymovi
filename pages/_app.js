@@ -1,7 +1,7 @@
 import '../styles/globals.css'
-import Footer from './components/footer';
-import Meta from './components/meta';
-import Navbar from './components/navbar';
+import Footer from '../components/footer';
+import Meta from "../components/meta";
+import Navbar from '../components/navbar';
 
 function MyApp({ Component, pageProps }) {
   return(

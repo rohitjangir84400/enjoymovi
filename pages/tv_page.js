@@ -1,4 +1,4 @@
-import TvList from "./components/tvlist";
+import TvList from "../components/tvlist";
 import axios from "axios";
 
 
@@ -10,11 +10,11 @@ export default function Tv_page({ populartv , topratedtv , latesttvshow }) {
 }
 
 export async function getStaticProps() {
-  const res = await axios(`https://api.themoviedb.org/3/tv/popular?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`);
+  const res = await axios(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`);
   const populartv = res.data;
-  const resp = await axios(`https://api.themoviedb.org/3/tv/airing_today?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`);
+  const resp = await axios(`https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.API_KEY}&language=en-US&page=1`);
   const latesttvshow = resp.data;
-  const respo = await axios(`https://api.themoviedb.org/3/tv/top_rated?api_key=ce217ac5c7994fea51a1b02246f379c5&language=en-US&page=1`);
+  const respo = await axios(`https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.API_KEY}&language=en-US&page=1`);
   const topratedtv = respo.data;
   return {
     props: {
