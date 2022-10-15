@@ -1,5 +1,7 @@
 import { TabPanel, useTabs } from "react-headless-tabs";
 import Meta from "./meta";
+import Image from "next/image";
+import Link from "next/link";
 
 
 export default function MovieList({ movie, toprated, upcoming }) {
