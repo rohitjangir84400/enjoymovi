@@ -1,5 +1,5 @@
 import Image from "next/image";
-import next from "next";
+
 export default function Newssection() {
     return (
         <div className="text-center text-white px-10 py-20">

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import next from "next";
 
 export default function Upcoming_movies({ Upcoming }) {
     return (

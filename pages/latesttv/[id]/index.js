@@ -1,7 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
 import Meta from "../../components/meta";
-import next from "next";
 
 export default function Latesttv({ latesttv, tvvideo, tvreview }) {
     console.log(latesttv);

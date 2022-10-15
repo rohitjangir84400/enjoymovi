@@ -10,7 +10,6 @@ import Newssection from './components/newssection'
 import Joinsection from './components/join'
 import Movi from './components/enjoy_movi'
 import axios from 'axios'
-import next from 'next'
 
 export default function Home({upcoming , populartv}) {
   return (

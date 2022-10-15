@@ -1,6 +1,5 @@
 
 import Tranding from "./components/trandinglist";
-import next from "next";
 import axios from "axios";
 
 

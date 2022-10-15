@@ -1,5 +1,5 @@
 import CountUp from "react-countup";
-import next from "next";
+
 export default function Counteranimation() {
     return (
         <>

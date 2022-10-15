@@ -2,7 +2,6 @@ import '../styles/globals.css'
 import Footer from './components/footer';
 import Meta from './components/meta';
 import Navbar from './components/navbar';
-import next from 'next';
 
 function MyApp({ Component, pageProps }) {
   return(

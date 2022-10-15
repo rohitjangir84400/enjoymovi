@@ -3,7 +3,6 @@ import Upcoming_movies from "./upcoming";
 import Popular_movies from "./popular";
 import Toprated_movies from "./toprated";
 import Meta from "./meta";
-import next from "next";
 
 
 export default function MovieList({ movie, toprated, upcoming }) {
