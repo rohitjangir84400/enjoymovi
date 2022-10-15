@@ -1,5 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
+import Meta from "../../components/meta";
 
 export default function Movie({ movies, movievideo }) {
   console.log(movies);
@@ -7,7 +8,7 @@ export default function Movie({ movies, movievideo }) {
   return (
     <>
       <div className="container max-w-4xl mx-auto pt-6 text-white">
-        {/* <Meta title={movies.title} /> */}
+        <Meta title={movies.title} />
         <div className="sm:text-[50px] text-[30px] py-10 px-3">
           Movie Details
         </div>

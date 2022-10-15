@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TabPanel, useTabs } from "react-headless-tabs";
+import Meta from "./meta";
 
 export default function Tranding({ trandingdata }) {
 
@@ -9,6 +10,8 @@ export default function Tranding({ trandingdata }) {
     "trandingtv",
   ]);
   return (
+    <>
+    <Meta title='Tranding' />
     <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-2 p-5 text-white">
       {trandingdata.map(trandingmovie => {
         return (
@@ -27,5 +30,6 @@ export default function Tranding({ trandingdata }) {
       })
       }
     </div>
+    </>
   );
 }    

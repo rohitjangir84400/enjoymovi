@@ -1,10 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import { TabPanel, useTabs } from "react-headless-tabs";
-import { HeartIcon } from '@heroicons/react/24/solid'
 import Upcoming_movies from "./upcoming";
 import Popular_movies from "./popular";
 import Toprated_movies from "./toprated";
+import Meta from "./meta";
+
 
 export default function MovieList({ movie, toprated, upcoming }) {
 
@@ -16,6 +15,7 @@ export default function MovieList({ movie, toprated, upcoming }) {
 
   return (
     <div>
+      <Meta title="Movies_List" />
       <div className="flex text-center hover:cursor-pointer text-white">
         <div className="grow py-3 text-[20px]  hover:text-black hover:bg-white "
           onClick={() => setSelectedTab("upcoming")}

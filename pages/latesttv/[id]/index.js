@@ -1,5 +1,6 @@
 import axios from "axios";
 import Image from "next/image";
+import Meta from "../../components/meta";
 
 
 export default function Latesttv({ latesttv, tvvideo, tvreview }) {
@@ -9,7 +10,7 @@ export default function Latesttv({ latesttv, tvvideo, tvreview }) {
     return (
         <>
             <div className="container max-w-4xl mx-auto pt-6 text-white ">
-                {/* <Meta title={movies.title} /> */}
+                <Meta title={latesttv.name} />
                 <div className="sm:text-[50px] text-[30px] py-10 px-3">
                     Tv Show Details
                 </div>
