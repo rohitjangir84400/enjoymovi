@@ -8,12 +8,13 @@ export default function Populartv({ poptv, tvvideo }) {
   return (
     <>
       <div className="container max-w-4xl mx-auto pt-6 text-white ">
-        <Meta title={poptv.name} />
+        
         <div className="sm:text-[50px] text-[30px] py-10 px-3">
           Tv Show Details
         </div>
 
         <div className="px-3">
+        <Meta title={poptv.name} />
           <Image src={`https://image.tmdb.org/t/p/original${poptv.poster_path}`} width={1000} height={1100} className="rounded-md" alt={poptv.name} />
           <h1 className="font-bold text-[30px] my-2">{poptv.name}</h1>
           <p className="text-gray-600 text-sm mt-4">{poptv.tagline}</p>
