@@ -6,7 +6,11 @@ export default function Tv_page({ populartv , topratedtv , latesttvshow }) {
   console.log(populartv);
   console.log(topratedtv);
   console.log(latesttvshow);
-  return<TvList populartv={populartv.results} topratedtv={topratedtv.results} latesttvshow={latesttvshow.results} />
+  return(
+    <div>
+      <TvList populartv={populartv.results} topratedtv={topratedtv.results} latesttvshow={latesttvshow.results} />
+    </div>
+  );
 }
 
 export async function getStaticProps() {

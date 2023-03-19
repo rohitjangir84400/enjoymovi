@@ -3,7 +3,9 @@ import CountUp from "react-countup";
 export default function Counteranimation() {
     return (
         <>
-            <div className="p-10">
+            <div className="p-10"style={{
+      backgroundImage: `url('/images/upcoming-bg.png')`, backgroundPosition: "center", backgroundSize: "cover",
+    }}>
                 <div className="flex flex-wrap md:flex-row flex-col text-center text-[50px] text-white font-bold">
                 <div className="basis-12/12 md:basis-1/3 ">
                     <CountUp end={1130} duration={5} />

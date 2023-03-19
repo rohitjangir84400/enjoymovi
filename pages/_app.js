@@ -5,7 +5,7 @@ import Navbar from '../components/navbar';
 
 function MyApp({ Component, pageProps }) {
   return(
-    <div className="bg-[#010d1a]">
+    <div className="">
       <Meta title='Enjoymovie/Home' />
       <Navbar/>
       <Component {...pageProps}/>
@@ -15,3 +15,5 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+
+// bg-[#010d1a]

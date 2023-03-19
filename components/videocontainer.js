@@ -1,9 +1,11 @@
 
 export default function Videocontainer() {
     return (
-            <div>
+            <div style={{
+                backgroundImage: `url('/images/tv-series-bg.jpg')`, backgroundPosition: "center", backgroundSize: "cover",
+              }}>
                 <div>
-                    <div className="text-white text-[30px] sm:text-[50px] px-10 py-4">Movies tailer</div>
+                    <div className="text-white text-[30px] sm:text-[50px] px-10 py-4 font-bold">Movies tailer</div>
 
                     <div className="grid md:grid-cols-2 p-10">
                         <div className="p-2">

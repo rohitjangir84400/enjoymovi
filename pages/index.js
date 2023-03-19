@@ -7,6 +7,8 @@ import Newssection from '../components/newssection'
 import Joinsection from '../components/join'
 import Movi from '../components/enjoy_movi'
 import axios from 'axios'
+import Services from '../components/services'
+
 
 export default function Home({upcoming , populartv}) {
   return (
@@ -19,6 +21,7 @@ export default function Home({upcoming , populartv}) {
       <Movi/>
       <Counteranimation/>
       <Newssection/>
+      <Services/>
       <Joinsection />
 
      </>

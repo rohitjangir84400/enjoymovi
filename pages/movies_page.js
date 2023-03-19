@@ -1,13 +1,19 @@
 
 import MovieList from "../components/movieslist";
 import axios from "axios";
+import Enjoy from "../components/enjoysection";
 
 
 export default function Movies_page({ movie , toprated , upcoming}) {
   console.log(movie);
   console.log(toprated);
   console.log(upcoming);
-  return<MovieList movie={movie.results} toprated={toprated.results} upcoming={upcoming.results}/>
+  return(
+  <div>
+    <Enjoy/>
+    <MovieList movie={movie.results} toprated={toprated.results} upcoming={upcoming.results}/>
+  </div>
+  );
 }
 
 export async function getStaticProps() {

@@ -1,11 +1,17 @@
 
 import Tranding from "../components/trandinglist";
 import axios from "axios";
+import Enjoy from "../components/enjoysection";
 
 
 export default function Tranding_page({trandingdata}) {
   console.log(trandingdata)
-  return<Tranding trandingdata={trandingdata.results}/>
+  return(
+    <div>
+      <Enjoy/>
+      <Tranding trandingdata={trandingdata.results}/>
+    </div>
+  );
 }
 
 export async function getStaticProps() {

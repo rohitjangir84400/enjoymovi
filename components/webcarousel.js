@@ -45,7 +45,9 @@ export default function Homewebslider({ populartv }) {
     ],
   };
   return (
-    <div className="p-10">
+    <div className="p-10"style={{
+      backgroundImage: `url('/images/upcoming-bg.png')`, backgroundPosition: "center", backgroundSize: "cover",
+    }}>
       <div className="py-4 text-[30px] sm:text-[50px] text-white">
         Watch Tv Shows
       </div>
