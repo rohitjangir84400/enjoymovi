@@ -9,7 +9,7 @@ export default function Services() {
         }}>
             <div className="flex items-center flex-wrap p-2">
                 <div className="relative overflow-hidden aspect-[1/1] basis-full md:basis-1/2">
-                    <Image className="" src='/images/service-banner.jpg' alt="failed to load" width='100%' height='100%'
+                    <Image className="" src='/images/service-banner.jpg' alt="failed to load"
                         layout="fill" objectFit="contain" />
 
                 </div>

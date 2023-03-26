@@ -19,7 +19,7 @@ export default function Movie({ movies, movievideo }) {
               <div className="text-[14px] h-[100%] p-2 hover:cursor-pointer">
                 <div className="flex flex-col justify-center">
                   <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                    <Image className=" rounded-md" src={`https://image.tmdb.org/t/p/original${movies.backdrop_path}`} alt="failed to load" width='100%' height='100%'
+                    <Image className=" rounded-md" src={`https://image.tmdb.org/t/p/original${movies.backdrop_path}`} alt="failed to load"
                       layout="fill" objectFit="cover" />
                   </div>
                   <div className="text-white">

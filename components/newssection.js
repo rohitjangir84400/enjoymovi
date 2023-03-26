@@ -17,7 +17,7 @@ export default function Newssection() {
                         <Link href='/movie_page'>
                             <div className="flex flex-col justify-center">
                                 <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                                    <Image className=" rounded-md" src='/images/movie-4 (2).png' alt="failed to load" width='100%' height='100%'
+                                    <Image className=" rounded-md" src='/images/movie-4 (2).png' alt="failed to load"
                                         layout="fill" objectFit="cover" />
                                 </div>
                                 <div className="text-white">
@@ -42,7 +42,7 @@ export default function Newssection() {
                         <Link href='/movie_page'>
                             <div className="flex flex-col justify-center">
                                 <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                                    <Image className=" rounded-md" src='/images/movie-3.png' alt="failed to load" width='100%' height='100%'
+                                    <Image className=" rounded-md" src='/images/movie-3.png' alt="failed to load"
                                         layout="fill" objectFit="cover" />
                                 </div>
                                 <div className="text-white">
@@ -67,7 +67,7 @@ export default function Newssection() {
                         <Link href='/movie_page'>
                             <div className="flex flex-col justify-center">
                                 <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                                    <Image className=" rounded-md" src='/images/movie-1.png' alt="failed to load" width='100%' height='100%'
+                                    <Image className=" rounded-md" src='/images/movie-1.png' alt="failed to load"
                                         layout="fill" objectFit="cover" />
                                 </div>
                                 <div className="text-white">
@@ -92,7 +92,7 @@ export default function Newssection() {
                         <Link href='/movie_page'>
                             <div className="flex flex-col justify-center">
                                 <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                                    <Image className=" rounded-md" src='/images/movie-2.png' alt="failed to load" width='100%' height='100%'
+                                    <Image className=" rounded-md" src='/images/movie-2.png' alt="failed to load"
                                         layout="fill" objectFit="cover" />
                                 </div>
                                 <div className="text-white">
@@ -117,7 +117,7 @@ export default function Newssection() {
                         <Link href='/movie_page'>
                             <div className="flex flex-col justify-center">
                                 <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                                    <Image className=" rounded-md" src='/images/movie-5.png' alt="failed to load" width='100%' height='100%'
+                                    <Image className=" rounded-md" src='/images/movie-5.png' alt="failed to load"
                                         layout="fill" objectFit="cover" />
                                 </div>
                                 <div className="text-white">
@@ -142,7 +142,7 @@ export default function Newssection() {
                         <Link href='/movie_page'>
                             <div className="flex flex-col justify-center">
                                 <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                                    <Image className=" rounded-md" src='/images/movie-6.png' alt="failed to load" width='100%' height='100%'
+                                    <Image className=" rounded-md" src='/images/movie-6.png' alt="failed to load"
                                         layout="fill" objectFit="cover" />
                                 </div>
                                 <div className="text-white">
@@ -167,7 +167,7 @@ export default function Newssection() {
                         <Link href='/movie_page'>
                             <div className="flex flex-col justify-center">
                                 <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                                    <Image className=" rounded-md" src='/images/upcoming-1.png' alt="failed to load" width='100%' height='100%'
+                                    <Image className=" rounded-md" src='/images/upcoming-1.png' alt="failed to load"
                                         layout="fill" objectFit="cover" />
                                 </div>
                                 <div className="text-white">
@@ -192,7 +192,7 @@ export default function Newssection() {
                         <Link href='/movie_page'>
                             <div className="flex flex-col justify-center">
                                 <div className="overflow-hidden aspect-[2/3] relative mb-2" >
-                                    <Image className=" rounded-md" src='/images/upcoming-2.png' alt="failed to load" width='100%' height='100%'
+                                    <Image className=" rounded-md" src='/images/upcoming-2.png' alt="failed to load"
                                         layout="fill" objectFit="cover" />
                                 </div>
                                 <div className="text-white">
