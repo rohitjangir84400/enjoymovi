@@ -52,7 +52,7 @@ export default function Populartv({ poptv, tvvideo }) {
                   return (
                     <div key={com.id} className="bg-white rounded-lg flex flex-col">
                       <div className=''>
-                        <div className=""><Image src={`https://image.tmdb.org/t/p/original${com.logo_path}`} height={100} width={100} /></div>
+                        <div className=""><Image src={`https://image.tmdb.org/t/p/original${com.logo_path}`} alt="failed to load" height={100} width={100} /></div>
                         <div className="bg-black text-white rounded-lg p-2"><div>
                           {com.name}
                         </div>
