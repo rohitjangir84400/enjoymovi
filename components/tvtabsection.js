@@ -45,7 +45,7 @@ export default function TvTabcontent(props) {
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 text-white">
                         {prop1 && prop1.map(movie => {
                             return (
-                                <TvCard prop={movie} name='latesttv' />
+                                <TvCard key={movie.id} prop={movie} name='latesttv' />
                             );
                         })}
                     </div>
@@ -54,7 +54,7 @@ export default function TvTabcontent(props) {
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 text-white">
                         {prop2.map(movie => {
                             return (
-                                <TvCard prop={movie} name='toptv' />
+                                <TvCard key={movie.id} prop={movie} name='toptv' />
                             );
                         })}
                     </div>
@@ -63,7 +63,7 @@ export default function TvTabcontent(props) {
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 text-white">
                         {prop3.map(movie => {
                             return (
-                                <TvCard prop={movie} name='tv' />
+                                <TvCard key={movie.id} prop={movie} name='tv' />
                             );
                         })}
                     </div>

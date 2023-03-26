@@ -45,7 +45,7 @@ export default function Tabcontent(props) {
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 text-white">
                         {prop1 && prop1.map(movie => {
                             return (
-                                <Card prop={movie} name='movie' />
+                                <Card key={movie.id} prop={movie} name='movie' />
                             );
                         })}
                     </div>
@@ -54,7 +54,7 @@ export default function Tabcontent(props) {
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 text-white">
                         {prop2.map(movie => {
                             return (
-                                <Card prop={movie} name='tmovie' />
+                                <Card key={movie.id} prop={movie} name='tmovie' />
                             );
                         })}
                     </div>
@@ -63,7 +63,7 @@ export default function Tabcontent(props) {
                     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 text-white">
                         {prop3.map(movie => {
                             return (
-                                <Card prop={movie} name='upcomingmovies' />
+                                <Card key={movie.id} prop={movie} name='upcomingmovies' />
                             );
                         })}
                     </div>
